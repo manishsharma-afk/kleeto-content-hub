@@ -43,10 +43,10 @@ textarea{width:100%;min-height:70px;padding:10px;border:1px solid var(--line);bo
 .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--d);color:#fff;padding:10px 16px;border-radius:999px;font-size:13px;z-index:30}
 @media(max-width:900px){.kp,.tiles,.row2,.calw{grid-template-columns:1fr 1fr}.mb{grid-template-columns:1fr}.calw{grid-template-columns:1fr}}
 </style></head><body>
-<div id="login"><div class="lbox"><h1>kleeto <b>content hub</b></h1><p>Sign in with your work email. We'll send you a one-time link.</p>
-<input id="em" class="in" type="email" placeholder="you@kleeto.in"><div style="height:10px"></div><button class="btn g" id="send" style="width:100%">Send sign-in link</button><p id="lmsg" style="margin:12px 0 0;font-size:13px"></p></div></div>
+<div id="login"><div class="lbox"><h1>kleeto <b>content hub</b></h1><p>Sign in with your work email and password.</p>
+<input id="em" class="in" type="email" placeholder="you@kleeto.in" autocomplete="username"><div style="height:8px"></div><input id="pw" class="in" type="password" placeholder="Password" autocomplete="current-password"><div style="height:10px"></div><button class="btn g" id="go" style="width:100%">Sign in</button><div style="height:8px"></div><button class="btn l s" id="send" style="width:100%">Email me a sign-in link instead</button><p id="lmsg" style="margin:12px 0 0;font-size:13px"></p></div></div>
 <div id="app" class="hide">
-<div class="top"><div class="topi"><div class="brand">kleeto · <b>content hub</b></div><nav id="nav"><button data-v="dash" class="on">Dashboard</button><button data-v="cal">Calendar</button><button data-v="posts">All posts</button><button data-v="cmts">Comments</button></nav><span class="who" id="who"></span><button class="btn l s" id="out">Sign out</button></div></div>
+<div class="top"><div class="topi"><div class="brand">kleeto · <b>content hub</b></div><nav id="nav"><button data-v="dash" class="on">Dashboard</button><button data-v="cal">Calendar</button><button data-v="posts">All posts</button><button data-v="cmts">Comments</button></nav><span class="who" id="who"></span><button class="btn l s" id="chpw">Change password</button><button class="btn l s" id="out">Sign out</button></div></div>
 <div class="w">
 <section id="v-dash"></section>
 <section id="v-cal" class="hide"></section>
@@ -64,6 +64,10 @@ function toast(m){const t=document.createElement('div');t.className='toast';t.te
 const h=new URLSearchParams(location.hash.slice(1));
 if(h.get('access_token')){S={at:h.get('access_token'),rt:h.get('refresh_token'),exp:Date.now()/1000+ +h.get('expires_in')};localStorage.setItem('kch',JSON.stringify(S));history.replaceState(null,'',HOME)}
 if(h.get('error_description')){$('#lmsg').textContent=h.get('error_description');history.replaceState(null,'',HOME)}
+$('#go').onclick=async()=>{const e=$('#em').value.trim(),pw=$('#pw').value;if(!e||!pw)return;$('#lmsg').textContent='Signing in…';
+ const r=await fetch(U+'/auth/v1/token?grant_type=password',{method:'POST',headers:{apikey:K,'Content-Type':'application/json'},body:JSON.stringify({email:e,password:pw})});const j=await r.json();
+ if(!r.ok){$('#lmsg').textContent='Wrong email or password.';return}S={at:j.access_token,rt:j.refresh_token,exp:Date.now()/1000+j.expires_in};localStorage.setItem('kch',JSON.stringify(S));location.replace(HOME)};
+$('#pw').addEventListener('keydown',e=>{if(e.key=='Enter')$('#go').click()});
 $('#send').onclick=async()=>{const e=$('#em').value.trim();if(!e)return;$('#lmsg').textContent='Sending…';
  const r=await fetch(U+'/auth/v1/otp?redirect_to='+encodeURIComponent(HOME),{method:'POST',headers:{apikey:K,'Content-Type':'application/json'},body:JSON.stringify({email:e,create_user:true})});
  $('#lmsg').textContent=r.ok?'Check your inbox for the sign-in link.':'Could not send: '+(await r.json()).msg||r.status};
@@ -71,6 +75,8 @@ async function tok(){if(!S)return null;if(S.exp-60<Date.now()/1000){const r=awai
  if(!r.ok){logout();return null}const j=await r.json();S={at:j.access_token,rt:j.refresh_token,exp:Date.now()/1000+j.expires_in};localStorage.setItem('kch',JSON.stringify(S))}return S.at}
 function logout(){localStorage.removeItem('kch');S=null;location.replace(HOME)}
 $('#out').onclick=logout;
+$('#chpw').onclick=async()=>{const n=prompt('New password (at least 8 characters):');if(!n)return;if(n.length<8){toast('Too short');return}
+ try{await api('/auth/v1/user',{method:'PUT',body:JSON.stringify({password:n})});toast('Password changed')}catch(e){toast('Could not change password')}};
 async function api(path,opt={}){const t=await tok();const r=await fetch(U+path,{...opt,headers:{apikey:K,Authorization:'Bearer '+t,'Content-Type':'application/json',...(opt.headers||{})}});if(r.status==401){logout();return}if(!r.ok)throw new Error(await r.text());return r.status==204?null:r.json()}
 function email(){try{return JSON.parse(atob(S.at.split('.')[1].replace(/-/g,'+').replace(/_/g,'/'))).email}catch(e){return''}}
 async function sign(paths){paths=paths.filter(p=>p&&!URLS[p]);for(let i=0;i<paths.length;i+=100){const r=await api('/storage/v1/object/sign/content',{method:'POST',body:JSON.stringify({expiresIn:7200,paths:paths.slice(i,i+100)})});r.forEach(x=>{if(x.signedURL)URLS[x.path]=U+'/storage/v1'+x.signedURL})}}
