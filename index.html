@@ -1,0 +1,150 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>kleeto content hub</title>
+<style>
+:root{--g:#79B82A;--d:#1F2933;--a:#FFAE00;--li:#0A66C2;--ig:#C13584;--bg:#f4f5f1;--line:#e6e8eb;--mut:#6b7280}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--d);font:14px/1.45 Lexend,Manrope,"Helvetica Neue",Arial,sans-serif}
+button,input,select,textarea{font:inherit}a{color:#3f6d12}
+.hide{display:none!important}
+#login{min-height:100vh;display:grid;place-items:center}.lbox{background:#fff;border-radius:18px;padding:34px;width:min(400px,92vw)}
+.lbox h1{margin:0 0 6px;font-weight:500;font-size:22px}.lbox h1 b{color:var(--g);font-weight:500}.lbox p{color:var(--mut);margin:0 0 18px}
+.in{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.btn{border:0;border-radius:999px;padding:10px 18px;background:var(--d);color:#fff;cursor:pointer}.btn.g{background:var(--g)}.btn.l{background:#fff;color:var(--d);border:1px solid var(--line)}.btn.s{padding:6px 12px;font-size:12px}
+.top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.topi{max-width:1240px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;gap:18px}
+.brand{font-size:17px}.brand b{color:var(--g);font-weight:500}nav{display:flex;gap:4px;flex:1}nav button{border:0;background:none;padding:8px 14px;border-radius:999px;cursor:pointer;color:var(--d)}nav button.on{background:var(--d);color:#fff}
+.who{font-size:12px;color:var(--mut)}.w{max-width:1240px;margin:0 auto;padding:22px}
+.kp{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:12px;margin-bottom:14px}.k{background:#fff;border-radius:16px;padding:16px 20px}.k b{font-size:34px;font-weight:500;display:block;line-height:1.1}.k span{font-size:12px;color:var(--mut)}
+.k.dk{background:var(--d);color:#fff}.k.dk b{color:var(--a);font-size:44px}.k.dk span{color:#c9d1d9}
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.t{background:#fff;border-radius:16px;padding:16px}.th{display:flex;align-items:center;gap:8px;margin-bottom:10px}.th b{font-weight:500}.dot{width:10px;height:10px;border-radius:3px}
+.v{min-height:116px;display:flex;align-items:center;gap:10px}.big b{font-size:28px;font-weight:500;display:block;line-height:1}.big span{font-size:11px;color:var(--mut)}
+.t ul{list-style:none;padding:0;margin:10px 0 0;border-top:1px solid #eef0ec}.t li{font-size:12px;padding:6px 0 0 12px;position:relative}.t li:before{content:"";position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background:var(--g)}
+.row2{display:grid;grid-template-columns:1.6fr 1fr;gap:12px;margin-top:12px}.c{background:#fff;border-radius:16px;padding:18px}.c h3{margin:0 0 6px;font-size:14px;font-weight:500}.c small{color:var(--mut);font-size:11px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.chips span{background:#fff7e0;border-radius:999px;padding:6px 12px;font-size:12px}
+.calw{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:12px}.calh{display:flex;align-items:center;gap:10px;margin-bottom:10px}.calh h3{flex:1;margin:0;font-weight:500}
+.wd,.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}.wd div{font-size:11px;color:var(--mut);padding:2px 6px}
+.cell{background:#fafbf8;border-radius:8px;min-height:88px;padding:5px}.cell.off{background:none}.cell.today{outline:2px solid var(--g)}.dn{font-size:11px;color:var(--mut)}
+.ev{font-size:10.5px;border-radius:5px;padding:3px 5px;margin-top:3px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}.ev.LinkedIn{background:var(--li)}.ev.Instagram{background:var(--ig)}
+.ev.plan{background:#fff;border:1.5px dashed;color:var(--d)}.ev.plan.LinkedIn{border-color:var(--li)}.ev.plan.Instagram{border-color:var(--ig)}
+.lg{display:flex;gap:12px;font-size:11px;color:var(--mut)}.lg i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:4px}
+.agd{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--g);font-weight:600;margin:12px 0 4px}.ag{display:grid;grid-template-columns:46px 1fr;gap:0 8px;padding:7px 0;border-bottom:1px solid #eef0ec;cursor:pointer}.ag b{grid-row:span 2}.ag span{font-size:10px;font-weight:600}
+.flt{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.flt select,.flt input{padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}.card{background:#fff;border-radius:14px;overflow:hidden;cursor:pointer;border:1px solid transparent}.card:hover{border-color:var(--g)}
+.card .im{aspect-ratio:4/5;background:#eceee9;display:grid;place-items:center;color:var(--mut);font-size:12px;overflow:hidden}.card img{width:100%;height:100%;object-fit:cover}
+.card .cb{padding:10px 12px}.card .ti{font-size:12.5px;line-height:1.3;height:33px;overflow:hidden}.meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:10.5px;color:var(--mut)}
+.st{font-size:10px;padding:2px 8px;border-radius:999px;white-space:nowrap}.st-r{background:#fff1cc;color:#8a5a00}.st-l{background:#eef7e2;color:#3f6d12}.st-x{background:#fde8e8;color:#a32020}.st-n{background:#f1f2f4;color:#5b6270}.st-c{background:#e7eef7;color:#24507a}
+.badge{position:absolute}
+#modal{position:fixed;inset:0;background:rgba(20,24,28,.55);display:grid;place-items:center;z-index:20;padding:16px}.mb{background:#fff;border-radius:18px;width:min(1040px,100%);max-height:92vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr}
+.mm{background:#eceee9;padding:14px;display:flex;flex-direction:column;gap:8px}.mm img,.mm video{width:100%;border-radius:10px;display:block}.thumbs{display:flex;gap:6px;flex-wrap:wrap}.thumbs img{width:54px;border-radius:6px;cursor:pointer;opacity:.6}.thumbs img.on{opacity:1;outline:2px solid var(--g)}
+.md{padding:20px;display:flex;flex-direction:column;gap:12px}.md h2{margin:0;font-size:18px;font-weight:500}.cap{white-space:pre-wrap;background:#fafbf8;border-radius:10px;padding:12px;font-size:12.5px;max-height:220px;overflow:auto}
+.ctl{display:grid;grid-template-columns:1fr 1fr;gap:8px}.ctl label{font-size:11px;color:var(--mut)}.ctl select,.ctl input{width:100%;padding:8px;border:1px solid var(--line);border-radius:8px}
+.cm{border-top:1px solid #eef0ec;padding-top:10px}.cmi{background:#f7f8f5;border-radius:10px;padding:8px 10px;margin-bottom:6px;font-size:12.5px}.cmi.rio{background:#eef7e2}.cmi small{display:block;color:var(--mut);font-size:10.5px;margin-bottom:2px}
+textarea{width:100%;min-height:70px;padding:10px;border:1px solid var(--line);border-radius:10px;resize:vertical}
+.x{float:right;border:0;background:none;font-size:22px;cursor:pointer;line-height:1}
+.list .cmi{background:#fff;cursor:pointer}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--d);color:#fff;padding:10px 16px;border-radius:999px;font-size:13px;z-index:30}
+@media(max-width:900px){.kp,.tiles,.row2,.calw{grid-template-columns:1fr 1fr}.mb{grid-template-columns:1fr}.calw{grid-template-columns:1fr}}
+</style></head><body>
+<div id="login"><div class="lbox"><h1>kleeto <b>content hub</b></h1><p>Sign in with your work email. We'll send you a one-time link.</p>
+<input id="em" class="in" type="email" placeholder="you@kleeto.in"><div style="height:10px"></div><button class="btn g" id="send" style="width:100%">Send sign-in link</button><p id="lmsg" style="margin:12px 0 0;font-size:13px"></p></div></div>
+<div id="app" class="hide">
+<div class="top"><div class="topi"><div class="brand">kleeto · <b>content hub</b></div><nav id="nav"><button data-v="dash" class="on">Dashboard</button><button data-v="cal">Calendar</button><button data-v="posts">All posts</button><button data-v="cmts">Comments</button></nav><span class="who" id="who"></span><button class="btn l s" id="out">Sign out</button></div></div>
+<div class="w">
+<section id="v-dash"></section>
+<section id="v-cal" class="hide"></section>
+<section id="v-posts" class="hide"></section>
+<section id="v-cmts" class="hide"></section>
+</div></div>
+<div id="modal" class="hide"></div>
+<script>
+const U='https://lzfdxsfanwfhalfsmqpd.supabase.co',K='sb_publishable_pHvHljK8oP_-DCfSo4z_5Q_5tqXEpxq';
+const HOME=location.origin+location.pathname;
+let S=JSON.parse(localStorage.getItem('kch')||'null'),POSTS=[],CMTS=[],STATS={},URLS={},month=null;
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function toast(m){const t=document.createElement('div');t.className='toast';t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),2600)}
+// auth
+const h=new URLSearchParams(location.hash.slice(1));
+if(h.get('access_token')){S={at:h.get('access_token'),rt:h.get('refresh_token'),exp:Date.now()/1000+ +h.get('expires_in')};localStorage.setItem('kch',JSON.stringify(S));history.replaceState(null,'',HOME)}
+if(h.get('error_description')){$('#lmsg').textContent=h.get('error_description');history.replaceState(null,'',HOME)}
+$('#send').onclick=async()=>{const e=$('#em').value.trim();if(!e)return;$('#lmsg').textContent='Sending…';
+ const r=await fetch(U+'/auth/v1/otp?redirect_to='+encodeURIComponent(HOME),{method:'POST',headers:{apikey:K,'Content-Type':'application/json'},body:JSON.stringify({email:e,create_user:true})});
+ $('#lmsg').textContent=r.ok?'Check your inbox for the sign-in link.':'Could not send: '+(await r.json()).msg||r.status};
+async function tok(){if(!S)return null;if(S.exp-60<Date.now()/1000){const r=await fetch(U+'/auth/v1/token?grant_type=refresh_token',{method:'POST',headers:{apikey:K,'Content-Type':'application/json'},body:JSON.stringify({refresh_token:S.rt})});
+ if(!r.ok){logout();return null}const j=await r.json();S={at:j.access_token,rt:j.refresh_token,exp:Date.now()/1000+j.expires_in};localStorage.setItem('kch',JSON.stringify(S))}return S.at}
+function logout(){localStorage.removeItem('kch');S=null;location.replace(HOME)}
+$('#out').onclick=logout;
+async function api(path,opt={}){const t=await tok();const r=await fetch(U+path,{...opt,headers:{apikey:K,Authorization:'Bearer '+t,'Content-Type':'application/json',...(opt.headers||{})}});if(r.status==401){logout();return}if(!r.ok)throw new Error(await r.text());return r.status==204?null:r.json()}
+function email(){try{return JSON.parse(atob(S.at.split('.')[1].replace(/-/g,'+').replace(/_/g,'/'))).email}catch(e){return''}}
+async function sign(paths){paths=paths.filter(p=>p&&!URLS[p]);for(let i=0;i<paths.length;i+=100){const r=await api('/storage/v1/object/sign/content',{method:'POST',body:JSON.stringify({expiresIn:7200,paths:paths.slice(i,i+100)})});r.forEach(x=>{if(x.signedURL)URLS[x.path]=U+'/storage/v1'+x.signedURL})}}
+async function load(){POSTS=await api('/rest/v1/posts?select=*&order=sort');CMTS=await api('/rest/v1/comments?select=*&order=created_at.desc');const st=await api('/rest/v1/stats?key=eq.summary');STATS=st[0]?.value||{};
+ if(!POSTS.length&&!st.length){document.querySelector('.w').innerHTML='<div class="c"><h3>No access yet</h3><small>This email is not on the allowed list. Ask Manish to add you.</small></div>';return}
+ await sign(POSTS.flatMap(p=>(p.media||[]).flatMap(m=>[m.type=='video'?m.poster:m.path])));render()}
+// helpers
+const stc=s=>({'Live':'st-l','Rejected':'st-x','Ready for review':'st-r','Needs plain-word redo':'st-n','Changes requested':'st-c','Approved':'st-l','Scheduled':'st-c'}[s]||'st-n');
+const ist=d=>new Date(new Date(d).getTime()+5.5*3600e3);const two=n=>String(n).padStart(2,'0');
+const tm=d=>{const x=ist(d);return two(x.getUTCHours())+':'+two(x.getUTCMinutes())};
+function thumb(p){const m=(p.media||[])[0];if(!m)return '<div class="im">Live on Instagram</div>';const u=URLS[m.type=='video'?m.poster:m.path];return `<div class="im">${u?`<img loading="lazy" src="${u}">`:''}</div>`}
+function donut(v,t,lab,col){const p=t?v/t*100:0;return `<svg viewBox="0 0 36 36" width="92" height="92"><circle cx="18" cy="18" r="15.9" fill="none" stroke="#eceee9" stroke-width="3.6"/><circle cx="18" cy="18" r="15.9" fill="none" stroke="${col}" stroke-width="3.6" stroke-linecap="round" stroke-dasharray="${p} ${100-p}" transform="rotate(-90 18 18)"/><text x="18" y="20" text-anchor="middle" font-size="8" font-weight="600" fill="#1F2933">${lab}</text></svg>`}
+function render(){$('#who').textContent=email();dash();cal();posts();cmts()}
+function dash(){const li=POSTS.filter(p=>p.channel=='LinkedIn'),ig=POSTS.filter(p=>p.channel=='Instagram'),reels=ig.filter(p=>p.kind=='reel'),live=ig.filter(p=>p.status=='Live'&&new Date(p.published_at)>=new Date('2026-11-01'));
+ const rev=POSTS.filter(p=>p.status=='Ready for review').length,redo=POSTS.filter(p=>p.status=='Needs plain-word redo').length,open=CMTS.filter(c=>c.status!='done'&&c.author!='Rio').length;
+ const npd=STATS.new_per_day||[],mx=Math.max(...npd.map(x=>x[1]||0),1),w=100/Math.max(npd.length,1);
+ const bars=npd.map((x,i)=>{const v=x[1],hh=v==null?38:(v?v/mx*38:1);return `<rect x="${i*w+.6}" y="${40-hh}" width="${w-1.2}" height="${hh}" fill="${v==null?'#f3d2d2':(v?'#79B82A':'#d9ddd4')}"><title>${x[0]}: ${v==null?'run missed':v}</title></rect>`}).join('');
+ const nxt=POSTS.filter(p=>p.scheduled_at&&new Date(p.scheduled_at)>new Date()).sort((a,b)=>new Date(a.scheduled_at)-new Date(b.scheduled_at))[0];
+ const tile=(n,col,vis,pts)=>`<div class="t"><div class="th"><i class="dot" style="background:${col}"></i><b>${n}</b></div><div class="v">${vis}</div><ul>${pts.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`;
+ $('#v-dash').innerHTML=`<div class="kp"><div class="k dk"><b>${(STATS.decisions||[]).length+open}</b><span>things waiting on you</span></div><div class="k"><b>${rev}</b><span>posts ready to review</span></div><div class="k"><b>${STATS.prospects??'–'}</b><span>prospects</span></div><div class="k"><b>${live.length}</b><span>posts live this month</span></div></div>
+ <div class="tiles">${tile('Prospects','#79B82A',`${donut(STATS.private||0,STATS.prospects||1,`${STATS.private||0}/${STATS.prospects||0}`,'#79B82A')}<div class="big"><b>${STATS.emails??0}</b><span>verified emails</span></div>`,[STATS.prospect_run||'',`${STATS.govt||0} govt rows: your call`])}
+ ${tile('Email','#FFAE00',`<div class="big"><b>${STATS.emails_sent??0}</b><span>emails sent</span></div>`,['HR campaign awaiting review'])}
+ ${tile('Instagram','#C13584',`${donut(reels.filter(r=>r.status=='Live').length,reels.length,reels.filter(r=>r.status=='Live').length+'/'+reels.length,'#C13584')}<div class="big"><b>${live.length}</b><span>live this month</span></div>`,[nxt?`Next: ${ist(nxt.scheduled_at).getUTCDate()} Nov ${tm(nxt.scheduled_at)}`:'Nothing planned'])}
+ ${tile('LinkedIn','#0A66C2',`<div class="big"><b style="font-size:44px;color:#0A66C2">${li.length}</b><span>posts made</span></div>`,[`${li.filter(p=>p.status=='Ready for review').length} to review`,`${li.filter(p=>p.status=='Needs plain-word redo').length} to redo`])}
+ ${tile('Video','#1F2933',`<div style="display:grid;grid-template-columns:repeat(${reels.length||1},1fr);gap:5px;width:100%">${reels.map(r=>`<i title="${esc(r.title)}" style="aspect-ratio:9/16;border-radius:5px;background:${r.status=='Live'?'#79B82A':r.status=='Rejected'?'#e0a0a0':'#FFAE00'}"></i>`).join('')}</div>`,['Green live · amber review'])}</div>
+ <div class="row2"><div class="c"><h3>New prospects per day</h3><small>Pink = run missed</small><svg viewBox="0 0 100 40" width="100%" height="80" preserveAspectRatio="none">${bars}</svg></div>
+ <div class="c"><h3>Waiting on you</h3><div class="chips">${(STATS.decisions||[]).map(d=>`<span>${esc(d)}</span>`).join('')}${open?`<span style="background:#e7eef7">${open} open comment${open>1?'s':''}</span>`:''}</div></div></div>`}
+function cal(){const now=ist(new Date());if(!month)month=[now.getUTCFullYear(),now.getUTCMonth()];const [y,m]=month;
+ const ev=POSTS.flatMap(p=>{const out=[];if(p.published_at)out.push({p,d:p.published_at,plan:false});else if(p.scheduled_at)out.push({p,d:p.scheduled_at,plan:true});return out});
+ const by={};ev.forEach(e=>{const x=ist(e.d);if(x.getUTCFullYear()==y&&x.getUTCMonth()==m)(by[x.getUTCDate()]=by[x.getUTCDate()]||[]).push(e)});
+ const first=(new Date(Date.UTC(y,m,1)).getUTCDay()+6)%7,days=new Date(Date.UTC(y,m+1,0)).getUTCDate();let cells='';
+ for(let i=0;i<first;i++)cells+='<div class="cell off"></div>';
+ for(let d=1;d<=days;d++){const es=(by[d]||[]).sort((a,b)=>a.d<b.d?-1:1);cells+=`<div class="cell${y==now.getUTCFullYear()&&m==now.getUTCMonth()&&d==now.getUTCDate()?' today':''}"><span class="dn">${d}</span>${es.map(e=>`<div class="ev ${e.p.channel} ${e.plan?'plan':''}" data-id="${esc(e.p.id)}" title="${esc(e.p.title)}"><b>${tm(e.d)}</b> ${esc(e.p.title)}</div>`).join('')}</div>`}
+ const up=ev.filter(e=>new Date(e.d)>=new Date(Date.now()-864e5)).sort((a,b)=>a.d<b.d?-1:1).slice(0,12);let ag='',last='';
+ up.forEach(e=>{const x=ist(e.d),k=x.toUTCString().slice(0,11);if(k!=last){ag+=`<div class="agd">${k}</div>`;last=k}ag+=`<div class="ag" data-id="${esc(e.p.id)}"><b>${tm(e.d)}</b><span style="color:${e.p.channel=='LinkedIn'?'#0A66C2':'#C13584'}">${e.p.channel}${e.plan?' · planned':' · live'}</span><div style="font-size:12px">${esc(e.p.title)}</div></div>`});
+ const mn=new Date(Date.UTC(y,m,1)).toLocaleString('en-GB',{month:'long',year:'numeric',timeZone:'UTC'});
+ $('#v-cal').innerHTML=`<div class="calw"><div class="c"><div class="calh"><button class="btn l s" id="pm">‹</button><h3>${mn}</h3><button class="btn l s" id="nm">›</button><span class="lg"><span><i style="background:#C13584"></i>Instagram live</span><span><i style="background:#0A66C2"></i>LinkedIn live</span><span><i style="border:1.5px dashed #888"></i>Planned</span></span></div>
+ <div class="wd">${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(x=>`<div>${x}</div>`).join('')}</div><div class="grid">${cells}</div><small style="display:block;margin-top:8px">Times in IST. Set a post's planned slot from its card.</small></div>
+ <div class="c"><h3>Coming up</h3>${ag||'<small>Nothing planned yet. Open a post and set a slot.</small>'}</div></div>`;
+ $('#pm').onclick=()=>{month=m?[y,m-1]:[y-1,11];cal()};$('#nm').onclick=()=>{month=m==11?[y+1,0]:[y,m+1];cal()};
+ document.querySelectorAll('#v-cal [data-id]').forEach(el=>el.onclick=()=>open(el.dataset.id))}
+let F={pack:'',status:'',ch:'',q:''};
+function posts(){const packs=[...new Set(POSTS.map(p=>p.pack))],sts=[...new Set(POSTS.map(p=>p.status))];
+ const opt=(a,v,l)=>`<option value="">${l}</option>`+a.map(x=>`<option ${x==v?'selected':''}>${esc(x)}</option>`).join('');
+ const list=POSTS.filter(p=>(!F.pack||p.pack==F.pack)&&(!F.status||p.status==F.status)&&(!F.ch||p.channel==F.ch)&&(!F.q||(p.title+' '+p.caption+' '+p.id).toLowerCase().includes(F.q.toLowerCase())));
+ $('#v-posts').innerHTML=`<div class="flt"><input id="fq" placeholder="Search" value="${esc(F.q)}"><select id="fc">${opt(['LinkedIn','Instagram'],F.ch,'All channels')}</select><select id="fp">${opt(packs,F.pack,'All packs')}</select><select id="fs">${opt(sts,F.status,'All statuses')}</select><span class="who" style="align-self:center">${list.length} items</span></div>
+ <div class="cards">${list.map(p=>{const n=CMTS.filter(c=>c.post_id==p.id).length;return `<div class="card" data-id="${esc(p.id)}">${thumb(p)}<div class="cb"><div class="ti">${esc(p.title)}</div><div class="meta"><span>${esc(p.id)}${n?` · 💬 ${n}`:''}</span><span class="st ${stc(p.status)}">${esc(p.status)}</span></div></div></div>`}).join('')}</div>`;
+ $('#fq').oninput=e=>{F.q=e.target.value;posts();const i=$('#fq');i.focus();i.setSelectionRange(i.value.length,i.value.length)};
+ $('#fc').onchange=e=>{F.ch=e.target.value;posts()};$('#fp').onchange=e=>{F.pack=e.target.value;posts()};$('#fs').onchange=e=>{F.status=e.target.value;posts()};
+ document.querySelectorAll('#v-posts .card').forEach(el=>el.onclick=()=>open(el.dataset.id))}
+function cmts(){$('#v-cmts').innerHTML=`<div class="c list"><h3>All comments</h3><small>Your notes to Rio and Rio's replies, newest first</small><div style="height:10px"></div>${CMTS.map(c=>`<div class="cmi ${c.author=='Rio'?'rio':''}" data-id="${esc(c.post_id)}"><small>${esc(c.post_id)} · ${esc(c.author)} · ${ist(c.created_at).toUTCString().slice(5,22)} IST · ${esc(c.status)}</small>${esc(c.body)}</div>`).join('')||'<small>No comments yet.</small>'}</div>`;
+ document.querySelectorAll('#v-cmts [data-id]').forEach(el=>el.onclick=()=>open(el.dataset.id))}
+async function open(id){const p=POSTS.find(x=>x.id==id);if(!p)return;const md=p.media||[];await sign(md.map(m=>m.path));
+ const media=md.length?(md[0].type=='video'?`<video controls playsinline poster="${URLS[md[0].poster]||''}" src="${URLS[md[0].path]}"></video>`:`<img id="mi" src="${URLS[md[0].path]}">`+(md.length>1?`<div class="thumbs">${md.map((m,i)=>`<img data-i="${i}" class="${i?'':'on'}" src="${URLS[m.path]}">`).join('')}</div>`:'')):`<div style="padding:30px;color:#6b7280">Live on Instagram, no file stored here.</div>`;
+ const loc=p.scheduled_at?(()=>{const x=ist(p.scheduled_at);return `${x.getUTCFullYear()}-${two(x.getUTCMonth()+1)}-${two(x.getUTCDate())}T${two(x.getUTCHours())}:${two(x.getUTCMinutes())}`})():'';
+ const thread=CMTS.filter(c=>c.post_id==id).slice().reverse();
+ const stl=['Ready for review','Changes requested','Approved','Scheduled','Live','Needs plain-word redo','Rejected'];
+ $('#modal').innerHTML=`<div class="mb"><div class="mm">${media}${md.length?`<a class="btn l s" style="text-align:center;text-decoration:none" href="${URLS[md[0].path]}" download>Download</a>`:''}</div>
+ <div class="md"><div><button class="x" id="cx">×</button><small class="who">${esc(p.id)} · ${esc(p.channel)} · ${esc(p.pack)}</small><h2>${esc(p.title)}</h2></div>
+ ${p.permalink?`<a href="${esc(p.permalink)}" target="_blank" rel="noopener">Open the live post ↗</a>`:''}
+ ${p.caption?`<div><div style="display:flex;justify-content:space-between;align-items:center"><b style="font-weight:500">Caption</b><button class="btn l s" id="cp">Copy</button></div><div class="cap">${esc(p.caption)}</div></div>`:''}
+ <div class="ctl"><div><label>Status</label><select id="ps">${stl.concat(stl.includes(p.status)?[]:[p.status]).map(s=>`<option ${s==p.status?'selected':''}>${esc(s)}</option>`).join('')}</select></div><div><label>Planned slot (IST)</label><input id="pt" type="datetime-local" value="${loc}"></div></div>
+ <button class="btn l s" id="sv" style="justify-self:start">Save status and slot</button>
+ <div class="cm"><b style="font-weight:500">Comments for Rio</b><div style="height:6px"></div>${thread.map(c=>`<div class="cmi ${c.author=='Rio'?'rio':''}"><small>${esc(c.author)} · ${ist(c.created_at).toUTCString().slice(5,22)} IST${c.author!='Rio'?' · '+esc(c.status):''}</small>${esc(c.body)}</div>`).join('')}
+ <textarea id="ct" placeholder="e.g. Make the headline shorter and use a warmer photo"></textarea><div style="height:8px"></div><button class="btn g" id="cs">Send to Rio</button></div></div></div>`;
+ $('#modal').classList.remove('hide');
+ $('#modal').onclick=e=>{if(e.target.id=='modal')close()};$('#cx').onclick=close;
+ document.querySelectorAll('.thumbs img').forEach(t=>t.onclick=()=>{$('#mi').src=t.src;document.querySelectorAll('.thumbs img').forEach(x=>x.classList.remove('on'));t.classList.add('on')});
+ if($('#cp'))$('#cp').onclick=()=>{navigator.clipboard.writeText(p.caption);toast('Caption copied')};
+ $('#sv').onclick=async()=>{const v=$('#pt').value;const body={status:$('#ps').value,scheduled_at:v?v+':00+05:30':null,updated_at:new Date().toISOString()};
+  try{await api('/rest/v1/posts?id=eq.'+encodeURIComponent(id),{method:'PATCH',headers:{Prefer:'return=minimal'},body:JSON.stringify(body)});Object.assign(p,body);toast('Saved');dash();cal();posts()}catch(e){toast('Could not save')}};
+ $('#cs').onclick=async()=>{const b=$('#ct').value.trim();if(!b)return;try{const r=await api('/rest/v1/comments',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify({post_id:id,author:email(),body:b})});CMTS.unshift(r[0]);toast('Sent to Rio');open(id);dash();cmts();posts()}catch(e){toast('Could not send')}}}
+function close(){$('#modal').classList.add('hide');$('#modal').innerHTML=''}
+document.addEventListener('keydown',e=>{if(e.key=='Escape')close()});
+document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#nav button').forEach(x=>x.classList.remove('on'));b.classList.add('on');['dash','cal','posts','cmts'].forEach(v=>$('#v-'+v).classList.toggle('hide',v!=b.dataset.v))});
+if(S){$('#login').classList.add('hide');$('#app').classList.remove('hide');load().catch(e=>{console.error(e);toast('Could not load data')})}
+</script></body></html>
